@@ -1,0 +1,27 @@
+DecisionTreeClassifier() AUC: 0.5529322162985528
+DecisionTreeClassifier() accuracy: 0.7448132780082988
+DecisionTreeClassifier() F1 score: 0.5503015132552054
+RandomForestClassifier() AUC: 0.5426186849454177
+RandomForestClassifier() accuracy: 0.8402489626556017
+RandomForestClassifier() F1 score: 0.5418194387862179
+GradientBoostingClassifier() AUC: 0.579049251078954
+GradientBoostingClassifier() accuracy: 0.8319502074688797
+GradientBoostingClassifier() F1 score: 0.5940018510237826
+AdaBoostClassifier() AUC: 0.5832063975628332
+AdaBoostClassifier() accuracy: 0.8215767634854771
+AdaBoostClassifier() F1 score: 0.5964720999961061
+[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+[LightGBM] [Info] Number of positive: 158, number of negative: 818
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000439 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 407
+[LightGBM] [Info] Number of data points in the train set: 976, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.161885 -> initscore=-1.644267
+[LightGBM] [Info] Start training from score -1.644267
+LGBMClassifier() AUC: 0.5869192688499619
+LGBMClassifier() accuracy: 0.8278008298755186
+LGBMClassifier() F1 score: 0.6021480781661777
+LogisticRegression() AUC: 0.5581365828890581
+LogisticRegression() accuracy: 0.8402489626556017
+LogisticRegression() F1 score: 0.5666024405908799
+MLFLOW finished successfully

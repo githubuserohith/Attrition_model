@@ -8,17 +8,18 @@ import streamlit as st
 
 warnings.filterwarnings("ignore")
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://imgur.com/aqgmhvG");
-background-size: cover;
-}
-</style>
-'''
+# page_bg_img = '''
+# <style>
+# body {
+# background-image: url("https://imgur.com/aqgmhvG");
+# background-size: cover;
+# }
+# </style>
+# '''
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
-# os.chdir(r"")
+# st.markdown(page_bg_img, unsafe_allow_html=True)
+# # os.chdir(r"")
+
 df = pd.read_csv("IBM.csv")
 
 model,pp,X_train,X_test,y_train,y_test,model_list = am.fn_model(df)

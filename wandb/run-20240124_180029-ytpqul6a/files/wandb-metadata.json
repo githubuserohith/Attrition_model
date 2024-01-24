@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.11.3",
+    "heartbeatAt": "2024-01-24T12:30:31.856142",
+    "startedAt": "2024-01-24T12:30:29.440776",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\rohit\\anaconda3\\envs\\streamlite\\Scripts\\MLOP\\session - MLflow\\attrition\\wb.py",
+    "codePathLocal": "wb.py",
+    "codePath": "wb.py",
+    "git": {
+        "remote": "https://github.com/githubuserohith/attrition",
+        "commit": "dac49f01bca8b11b0982cfd6f6ce8f43f530dcfd"
+    },
+    "email": "rohithravi2015@gmail.com",
+    "root": "C:/Users/rohit/anaconda3/envs/streamlite/Scripts/MLOP/session - MLflow/attrition",
+    "host": "MRK",
+    "username": "rohit",
+    "executable": "C:\\Users\\rohit\\anaconda3\\python.exe",
+    "cpu_count": 12,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1532.0,
+        "min": 0.0,
+        "max": 2500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1532.0,
+            "min": 0.0,
+            "max": 2500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 475.4378089904785,
+            "used": 144.77586364746094
+        }
+    },
+    "memory": {
+        "total": 15.628593444824219
+    }
+}

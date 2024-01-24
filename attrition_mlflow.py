@@ -3,6 +3,8 @@ import mlflow
 import mlflow.sklearn
 import os
 from sklearn.metrics import accuracy_score, roc_auc_score,f1_score
+import wandb
+
 # from sklearn.tree import DecisionTreeClassifier
 
 # MLFLOW
@@ -14,6 +16,20 @@ def fn_mlflow(model,X_train,X_test,y_train,y_test,model_list):
     os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/githubuserohith/play.mlflow"
     os.environ["MLFLOW_TRACKING_USERNAME"] = "githubuserohith"
     os.environ["MLFLOW_TRACKING_PASSWORD"] = "0c56e514448497e871937945a92350a57752a341"
+
+
+    wandb.init(
+        # set the wandb project where this run will be logged
+        project="project_attrition"
+        
+        # track hyperparameters and run metadata
+        # config={
+        # "learning_rate": 0.02,
+        # "architecture": "CNN",
+        # "dataset": "CIFAR-100",
+        # "epochs": 10,
+        # }
+    )
 
 # Now you can use MLflow with the configured environment variables
 
@@ -94,6 +110,8 @@ def fn_mlflow(model,X_train,X_test,y_train,y_test,model_list):
             mlflow.log_metric("accuracy", round(accuracy,3))
             mlflow.log_metric("f1", round(f1,3))
 
+            wandb.log({"auc": auc, "accuracy": accuracy})
+
             print(f"{model} AUC: {auc}")
             print(f"{model} accuracy: {accuracy}")
             print(f"{model} F1 score: {f1}")
@@ -112,3 +130,12 @@ def fn_mlflow(model,X_train,X_test,y_train,y_test,model_list):
     # MLFLOW_TRACKING_USERNAME=githubuserohith \
     # MLFLOW_TRACKING_PASSWORD=0c56e514448497e871937945a92350a57752a341 \
     # python script.py
+
+
+    # w&b
+    # for item in range(2, epochs):
+    #     acc = 1 - 2 ** -epoch - random.random() / epoch - offset
+    #     loss = 2 ** -epoch + random.random() / epoch + offset
+    
+    # # log metrics to wandb
+    # wandb.log({"acc": acc, "loss": loss})
